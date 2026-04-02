@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pull Tab Candle Co — Hand-poured candles with craft spirit. Coming soon.">
+  <meta property="og:title" content="Pull Tab Candle Co">
+  <meta property="og:description" content="Cracking one open soon.">
+  <meta property="og:type" content="website">
+  <title>Pull Tab Candle Co</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      background-color: #1b1108;
+      background-image: radial-gradient(ellipse 160% 110% at 50% 45%, #2e1d09 0%, #1b1108 62%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: #ede4d4;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.042;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      translate: -50% -56%;
+      width: min(800px, 140vw);
+      height: min(560px, 100vh);
+      background: radial-gradient(ellipse at center, rgba(196, 120, 28, 0.08) 0%, transparent 68%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .divider-rule {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(196, 122, 38, 0.6));
+    }
+
+    .divider-rule:last-child {
+      background: linear-gradient(to left, transparent, rgba(196, 122, 38, 0.6));
+    }
+
+    .divider svg {
+      width: 20px;
+      height: 20px;
+      color: rgba(196, 122, 38, 0.68);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.8rem, 8.5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: #f4e9d5;
+      margin-bottom: 1.25rem;
+    }
+
+    .subheadline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+      font-weight: 400;
+      color: #c47a2a;
+      letter-spacing: 0.01em;
+      margin-bottom: 3rem;
+    }
+
+    .cta-wrap {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.9rem 1.875rem;
+      background: transparent;
+      border: 1.5px solid rgba(196, 122, 38, 0.5);
+      border-radius: 3px;
+      color: #ede4d4;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition:
+        background 0.22s ease,
+        border-color 0.22s ease,
+        color 0.22s ease;
+    }
+
+    .cta-link:hover {
+      background: rgba(196, 122, 38, 0.1);
+      border-color: rgba(196, 122, 38, 0.85);
+      color: #f4e9d5;
+    }
+
+    .cta-link:focus-visible {
+      outline: 2px solid rgba(196, 122, 38, 0.65);
+      outline-offset: 4px;
+    }
+
+    .cta-link svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    .handle {
+      font-size: 0.78rem;
+      font-weight: 300;
+      letter-spacing: 0.07em;
+      color: rgba(237, 228, 212, 0.36);
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      color: rgba(237, 228, 212, 0.18);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 380px) {
+      .cta-link {
+        padding: 0.85rem 1.4rem;
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="divider" aria-hidden="true">
+      <span class="divider-rule"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2c0 0-5 5.5-5 9.5a5 5 0 0 0 10 0C17 7.5 12 2 12 2z"/>
+        <ellipse cx="12" cy="13" rx="1.8" ry="2.4" fill="currentColor" stroke="none" opacity="0.45"/>
+      </svg>
+      <span class="divider-rule"></span>
+    </div>
+
+    <h1>Pull Tab<br>Candle Co</h1>
+
+    <p class="subheadline">Cracking one open soon.</p>
+
+    <div class="cta-wrap">
+      <a
+        href="https://www.instagram.com/pulltabcandleco"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-link"
+        aria-label="Follow Pull Tab Candle Co on Instagram"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/>
+        </svg>
+        Follow us on Instagram
+      </a>
+      <span class="handle">@pulltabcandleco</span>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Pull Tab Candle Co</footer>
+
+</body>
+</html>
